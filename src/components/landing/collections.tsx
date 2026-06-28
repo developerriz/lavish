@@ -42,7 +42,7 @@ export function NewArrivals() {
           <div
             className={cn(
               "transition-all duration-700",
-              isVisible ? "animate-fade-in-up" : "opacity-0"
+              isVisible ? "animate-fade-in-up" : "opacity-0",
             )}
           >
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black uppercase leading-[0.9] tracking-tight text-black">
@@ -54,11 +54,13 @@ export function NewArrivals() {
           <div
             className={cn(
               "flex items-end transition-all duration-700",
-              isVisible ? "animate-fade-in-up delay-200" : "opacity-0"
+              isVisible ? "animate-fade-in-up delay-200" : "opacity-0",
             )}
           >
             <p className="text-neutral-500 text-sm lg:text-base leading-relaxed max-w-md">
-              Discover our latest collection of thoughtfully designed furniture pieces, each crafted with precision and an eye for modern aesthetics.
+              Discover our latest collection of thoughtfully designed furniture
+              pieces, each crafted with precision and an eye for modern
+              aesthetics.
             </p>
           </div>
         </div>
@@ -69,17 +71,17 @@ export function NewArrivals() {
               key={product.name}
               className={cn(
                 "group bg-white relative cursor-pointer transition-all duration-500",
-                isVisible ? "animate-fade-in-up" : "opacity-0"
+                isVisible ? "animate-fade-in-up" : "opacity-0",
               )}
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
-              <div className="relative border-2 aspect-square overflow-hidden">
+              <div className="relative rounded-4xl border-2 aspect-square overflow-hidden hover:border-[#00B59D] transition duration-500">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
-                  className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain rounded-[18px] p-2 group-hover:scale-105 transition-transform duration-500 "
                 />
 
                 {product.tag && (
@@ -88,7 +90,7 @@ export function NewArrivals() {
                       "absolute top-4 left-4 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest",
                       product.tag === "New"
                         ? "bg-[#00BFA5] text-white"
-                        : "bg-black text-white"
+                        : "bg-black text-white",
                     )}
                   >
                     {product.tag}
